@@ -8,25 +8,23 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Serif+4:wght@300;400;600&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css" />
-
-  <!-- ============================================================
-       AQUÍ VA TU CÓDIGO DE GOOGLE ADSENSE (cuando te lo aprueben)
-       Ejemplo:
-       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
-  ============================================================ -->
-
+ 
+  <!-- AQUÍ VA TU CÓDIGO DE GOOGLE ADSENSE (cuando te lo aprueben)
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+  -->
+ 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
+ 
     body {
       font-family: 'DM Sans', sans-serif;
       color: #1a1a1a;
       background: #f4f2ee;
       min-height: 100vh;
     }
-
+ 
     a { color: inherit; text-decoration: none; }
-
+ 
     /* ---- TOPBAR ---- */
     .topbar {
       background: #1A3A5C;
@@ -36,7 +34,7 @@
       padding: 7px 16px;
       letter-spacing: 0.06em;
     }
-
+ 
     /* ---- HEADER ---- */
     .header {
       background: #fff;
@@ -54,6 +52,7 @@
       font-size: 28px;
       color: #1A3A5C;
       letter-spacing: -0.5px;
+      cursor: pointer;
     }
     .logo span { color: #E8A020; }
     .nav {
@@ -62,8 +61,9 @@
       font-size: 13px;
       color: #555;
     }
+    .nav a { cursor: pointer; }
     .nav a:hover { color: #1A3A5C; font-weight: 500; }
-
+ 
     /* ---- HERO ---- */
     .hero {
       background: #1A3A5C;
@@ -129,7 +129,7 @@
       font-weight: 500;
     }
     .hero-search button:hover { background: #c98a10; }
-
+ 
     /* ---- ANUNCIO BANNER ---- */
     .ad-banner {
       margin: 28px 40px;
@@ -141,13 +141,12 @@
       border: 1px dashed #ccc;
       background: #fafafa;
     }
-    /* Cuando pongas AdSense real, reemplaza el contenido de .ad-banner con tu bloque de anuncio */
     .ad-banner-label {
       font-size: 11px;
       color: #aaa;
       letter-spacing: 0.07em;
     }
-
+ 
     /* ---- LAYOUT PRINCIPAL ---- */
     .wrapper {
       max-width: 1160px;
@@ -160,7 +159,7 @@
       gap: 32px;
       align-items: start;
     }
-
+ 
     /* ---- ETIQUETA DE SECCIÓN ---- */
     .section-label {
       font-size: 10px;
@@ -170,7 +169,7 @@
       margin-bottom: 14px;
       text-transform: uppercase;
     }
-
+ 
     /* ---- CATEGORÍAS ---- */
     .cat-grid {
       display: grid;
@@ -202,7 +201,7 @@
       color: #333;
       line-height: 1.3;
     }
-
+ 
     /* ---- ARTÍCULOS DESTACADOS ---- */
     .featured-grid {
       display: grid;
@@ -215,6 +214,7 @@
       border: 1px solid #e8e5df;
       border-radius: 12px;
       overflow: hidden;
+      cursor: pointer;
     }
     .art-img {
       height: 190px;
@@ -247,7 +247,7 @@
       margin-bottom: 12px;
     }
     .art-meta { font-size: 11px; color: #aaa; }
-
+ 
     .art-side { display: flex; flex-direction: column; gap: 12px; }
     .art-small {
       background: #fff;
@@ -255,6 +255,7 @@
       border-radius: 12px;
       padding: 16px;
       flex: 1;
+      cursor: pointer;
     }
     .art-small:hover { border-color: #1A3A5C; }
     .art-small-tag {
@@ -272,7 +273,7 @@
       color: #1a1a1a;
     }
     .art-small p { font-size: 12px; color: #888; line-height: 1.45; }
-
+ 
     /* ---- LISTA MÁS BUSCADOS ---- */
     .art-list-item {
       display: flex;
@@ -280,7 +281,9 @@
       padding: 14px 0;
       border-bottom: 1px solid #ede9e2;
       align-items: flex-start;
+      cursor: pointer;
     }
+    .art-list-item:hover .art-list-text h4 { color: #1A3A5C; }
     .art-list-num {
       font-family: 'Playfair Display', serif;
       font-size: 24px;
@@ -294,12 +297,13 @@
       line-height: 1.3;
       margin-bottom: 5px;
       color: #1a1a1a;
+      transition: color 0.2s;
     }
     .art-list-text p { font-size: 13px; color: #888; line-height: 1.4; }
-
+ 
     /* ---- SIDEBAR ---- */
     .sidebar { position: sticky; top: 80px; }
-
+ 
     .ad-side {
       background: #fafafa;
       border: 1px dashed #ccc;
@@ -313,7 +317,7 @@
     }
     .ad-side span { font-size: 10px; color: #bbb; letter-spacing: 0.07em; margin-bottom: 4px; }
     .ad-side small { font-size: 10px; color: #bbb; }
-
+ 
     .widget {
       background: #fff;
       border: 1px solid #e8e5df;
@@ -337,6 +341,7 @@
       border-bottom: 1px solid #f0ece6;
       font-size: 13px;
       color: #333;
+      cursor: pointer;
     }
     .widget-item:last-child { border-bottom: none; }
     .widget-item i { color: #1A3A5C; font-size: 17px; }
@@ -349,7 +354,7 @@
       border-radius: 3px;
       margin-left: auto;
     }
-
+ 
     .newsletter {
       background: #1A3A5C;
       border-radius: 12px;
@@ -390,7 +395,7 @@
       font-family: 'DM Sans', sans-serif;
     }
     .newsletter button:hover { background: #c98a10; }
-
+ 
     /* ---- FOOTER ---- */
     .footer {
       background: #111E2B;
@@ -409,7 +414,217 @@
       margin: 0 12px;
     }
     .footer a:hover { color: #fff; }
-
+ 
+    /* ---- PÁGINA DE ARTÍCULO ---- */
+    .article-page { display: none; }
+    .article-page.active { display: block; }
+    .home-page { display: block; }
+    .home-page.hidden { display: none; }
+ 
+    .article-hero {
+      background: #1A3A5C;
+      color: #fff;
+      padding: 48px 40px 40px;
+    }
+    .article-breadcrumb {
+      font-size: 12px;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .article-breadcrumb span { cursor: pointer; }
+    .article-breadcrumb span:hover { color: #fff; }
+    .article-cat-tag {
+      display: inline-block;
+      background: #E8A020;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 500;
+      padding: 4px 12px;
+      border-radius: 4px;
+      letter-spacing: 0.08em;
+      margin-bottom: 16px;
+    }
+    .article-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 38px;
+      line-height: 1.15;
+      max-width: 700px;
+      margin-bottom: 16px;
+    }
+    .article-hero-meta {
+      font-size: 12px;
+      color: rgba(255,255,255,0.5);
+      display: flex;
+      gap: 20px;
+    }
+ 
+    .article-wrapper {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 40px 40px 60px;
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 48px;
+      align-items: start;
+    }
+ 
+    .article-content { font-family: 'Source Serif 4', serif; }
+    .article-content .lead {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #333;
+      margin-bottom: 32px;
+      font-weight: 400;
+      border-left: 3px solid #E8A020;
+      padding-left: 20px;
+    }
+    .article-content h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      color: #1A3A5C;
+      margin: 36px 0 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #e8e5df;
+    }
+    .article-content h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      color: #1a1a1a;
+      margin: 24px 0 10px;
+    }
+    .article-content p {
+      font-size: 16px;
+      line-height: 1.75;
+      color: #444;
+      margin-bottom: 18px;
+    }
+    .article-content ul, .article-content ol {
+      margin: 0 0 18px 20px;
+    }
+    .article-content li {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #444;
+      margin-bottom: 6px;
+    }
+ 
+    .info-box {
+      background: #EFF6FF;
+      border: 1px solid #BFDBFE;
+      border-radius: 10px;
+      padding: 18px 20px;
+      margin: 24px 0;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .info-box-title {
+      font-size: 12px;
+      font-weight: 500;
+      color: #1A3A5C;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+    .info-box p {
+      font-size: 14px !important;
+      color: #1e40af !important;
+      margin-bottom: 0 !important;
+      line-height: 1.6 !important;
+    }
+ 
+    .warning-box {
+      background: #FFFBEB;
+      border: 1px solid #FDE68A;
+      border-radius: 10px;
+      padding: 18px 20px;
+      margin: 24px 0;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .warning-box-title {
+      font-size: 12px;
+      font-weight: 500;
+      color: #92400e;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+    .warning-box p {
+      font-size: 14px !important;
+      color: #78350f !important;
+      margin-bottom: 0 !important;
+      line-height: 1.6 !important;
+    }
+ 
+    .steps-list {
+      counter-reset: steps;
+      list-style: none !important;
+      margin-left: 0 !important;
+      margin-bottom: 24px;
+    }
+    .steps-list li {
+      counter-increment: steps;
+      display: flex;
+      gap: 16px;
+      margin-bottom: 16px !important;
+      align-items: flex-start;
+    }
+    .steps-list li::before {
+      content: counter(steps);
+      background: #1A3A5C;
+      color: #fff;
+      font-family: 'Playfair Display', serif;
+      font-size: 14px;
+      min-width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+ 
+    .doc-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0 28px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+    }
+    .doc-table th {
+      background: #1A3A5C;
+      color: #fff;
+      padding: 10px 14px;
+      text-align: left;
+      font-weight: 500;
+    }
+    .doc-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid #e8e5df;
+      color: #444;
+    }
+    .doc-table tr:nth-child(even) td { background: #f9f7f4; }
+ 
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #fff;
+      border: 1px solid #e8e5df;
+      border-radius: 8px;
+      padding: 10px 18px;
+      font-size: 13px;
+      color: #555;
+      cursor: pointer;
+      margin-bottom: 32px;
+      font-family: 'DM Sans', sans-serif;
+      transition: border-color 0.2s;
+    }
+    .back-btn:hover { border-color: #1A3A5C; color: #1A3A5C; }
+ 
     /* ---- RESPONSIVE ---- */
     @media (max-width: 900px) {
       .header { padding: 14px 20px; }
@@ -422,189 +637,833 @@
       .cat-grid { grid-template-columns: repeat(2, 1fr); }
       .featured-grid { grid-template-columns: 1fr; }
       .sidebar { position: static; }
+      .article-hero { padding: 32px 20px; }
+      .article-hero h1 { font-size: 26px; }
+      .article-wrapper { grid-template-columns: 1fr; padding: 24px 20px 40px; gap: 24px; }
     }
   </style>
 </head>
 <body>
-
+ 
   <!-- BARRA SUPERIOR -->
   <div class="topbar">Información práctica sobre trámites en España — Sin burocracia incomprensible</div>
-
+ 
   <!-- CABECERA -->
   <header class="header">
-    <div class="logo">Trámites<span>Ya</span></div>
+    <div class="logo" onclick="showHome()">Trámites<span>Ya</span></div>
     <nav class="nav">
-      <a href="#">DNI & Pasaporte</a>
-      <a href="#">Autónomos</a>
-      <a href="#">Extranjería</a>
-      <a href="#">Hacienda</a>
-      <a href="#">Vivienda</a>
+      <a onclick="showArticle('dni')">DNI & Pasaporte</a>
+      <a onclick="showArticle('autonomos')">Autónomos</a>
+      <a onclick="showArticle('extranjeria')">Extranjería</a>
+      <a onclick="showArticle('hacienda')">Hacienda</a>
+      <a onclick="showArticle('vivienda')">Vivienda</a>
     </nav>
   </header>
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-sub">Guías paso a paso</div>
-    <h1>Los trámites españoles explicados sin rodeos</h1>
-    <p>Todo lo que necesitas saber sobre gestiones con la Administración, en lenguaje claro y actualizado.</p>
-    <div class="hero-search">
-      <input type="text" placeholder="Busca un trámite, p.ej. 'empadronamiento'..." />
-      <button>Buscar</button>
+ 
+  <!-- ==================== PORTADA ==================== -->
+  <div class="home-page" id="home-page">
+ 
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-sub">Guías paso a paso</div>
+      <h1>Los trámites españoles explicados sin rodeos</h1>
+      <p>Todo lo que necesitas saber sobre gestiones con la Administración, en lenguaje claro y actualizado.</p>
+      <div class="hero-search">
+        <input type="text" placeholder="Busca un trámite, p.ej. 'empadronamiento'..." />
+        <button>Buscar</button>
+      </div>
+    </section>
+ 
+    <!-- ANUNCIO BANNER 728x90 -->
+    <div class="ad-banner">
+      <span class="ad-banner-label">ESPACIO PUBLICITARIO — Google AdSense 728×90</span>
     </div>
-  </section>
-
-  <!-- ANUNCIO BANNER 728x90 -->
-  <div class="ad-banner">
-    <!-- SUSTITUYE ESTE DIV POR TU BLOQUE DE ADSENSE CUANDO LO TENGAS -->
-    <span class="ad-banner-label">ESPACIO PUBLICITARIO — Google AdSense 728×90</span>
-  </div>
-
-  <!-- CONTENIDO PRINCIPAL -->
-  <div class="wrapper">
-    <div class="main-grid">
-
-      <!-- COLUMNA IZQUIERDA -->
-      <main>
-
-        <!-- CATEGORÍAS -->
-        <div class="section-label">Categorías principales</div>
-        <div class="cat-grid">
-          <a href="#" class="cat-card">
-            <div class="cat-icon"><i class="ti ti-id-badge" aria-hidden="true"></i></div>
-            <p>DNI y pasaporte</p>
-          </a>
-          <a href="#" class="cat-card">
-            <div class="cat-icon"><i class="ti ti-briefcase" aria-hidden="true"></i></div>
-            <p>Autónomos y empresa</p>
-          </a>
-          <a href="#" class="cat-card">
-            <div class="cat-icon"><i class="ti ti-home" aria-hidden="true"></i></div>
-            <p>Vivienda e hipoteca</p>
-          </a>
-          <a href="#" class="cat-card">
-            <div class="cat-icon"><i class="ti ti-plane" aria-hidden="true"></i></div>
-            <p>Extranjería y visados</p>
-          </a>
-          <a href="#" class="cat-card">
-            <div class="cat-icon"><i class="ti ti-coin" aria-hidden="true"></i></div>
-            <p>Hacienda e impuestos</p>
-          </a>
-          <a href="#" class="cat-card">
-            <div class="cat-icon"><i class="ti ti-heart" aria-hidden="true"></i></div>
-            <p>Sanidad y Seguridad Social</p>
-          </a>
-          <a href="#" class="cat-card">
-            <div class="cat-icon"><i class="ti ti-school" aria-hidden="true"></i></div>
-            <p>Educación y becas</p>
-          </a>
-          <a href="#" class="cat-card">
-            <div class="cat-icon"><i class="ti ti-car" aria-hidden="true"></i></div>
-            <p>Tráfico y vehículos</p>
-          </a>
-        </div>
-
-        <!-- ARTÍCULOS DESTACADOS -->
-        <div class="section-label">Artículos destacados</div>
-        <div class="featured-grid">
-          <a href="#" class="art-main">
-            <div class="art-img"><span class="art-img-tag">AUTÓNOMOS</span></div>
-            <div class="art-body">
-              <h2>Alta en autónomos en 2025: paso a paso sin errores</h2>
-              <p>Desde elegir la cuota hasta presentar el modelo 036. Todo lo que necesitas antes de empezar a facturar, con los cambios que entran en vigor este año.</p>
-              <div class="art-meta">12 min de lectura · Actualizado enero 2025</div>
+ 
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="wrapper">
+      <div class="main-grid">
+ 
+        <!-- COLUMNA IZQUIERDA -->
+        <main>
+ 
+          <!-- CATEGORÍAS -->
+          <div class="section-label">Categorías principales</div>
+          <div class="cat-grid">
+            <div class="cat-card" onclick="showArticle('dni')">
+              <div class="cat-icon"><i class="ti ti-id-badge" aria-hidden="true"></i></div>
+              <p>DNI y pasaporte</p>
             </div>
-          </a>
-          <div class="art-side">
-            <a href="#" class="art-small">
-              <div class="art-small-tag">DNI & PASAPORTE</div>
-              <h3>Cómo pedir cita previa para renovar el DNI (y no desesperarse)</h3>
-              <p>Los trucos que funcionan para conseguir cita en menos de una semana.</p>
-            </a>
-            <a href="#" class="art-small">
-              <div class="art-small-tag">EXTRANJERÍA</div>
-              <h3>TIE para ciudadanos de la UE: requisitos y documentación en 2025</h3>
-              <p>Qué necesitas, cuánto tarda y dónde pedirlo en tu provincia.</p>
-            </a>
-            <a href="#" class="art-small">
-              <div class="art-small-tag">HACIENDA</div>
-              <h3>Declaración de la renta: deducciones que casi nadie aplica</h3>
-              <p>Gastos deducibles que la mayoría pasa por alto y que pueden ahorrarte dinero.</p>
-            </a>
+            <div class="cat-card" onclick="showArticle('autonomos')">
+              <div class="cat-icon"><i class="ti ti-briefcase" aria-hidden="true"></i></div>
+              <p>Autónomos y empresa</p>
+            </div>
+            <div class="cat-card" onclick="showArticle('vivienda')">
+              <div class="cat-icon"><i class="ti ti-home" aria-hidden="true"></i></div>
+              <p>Vivienda e hipoteca</p>
+            </div>
+            <div class="cat-card" onclick="showArticle('extranjeria')">
+              <div class="cat-icon"><i class="ti ti-plane" aria-hidden="true"></i></div>
+              <p>Extranjería y visados</p>
+            </div>
+            <div class="cat-card" onclick="showArticle('hacienda')">
+              <div class="cat-icon"><i class="ti ti-coin" aria-hidden="true"></i></div>
+              <p>Hacienda e impuestos</p>
+            </div>
+            <div class="cat-card" onclick="showArticle('sanidad')">
+              <div class="cat-icon"><i class="ti ti-heart" aria-hidden="true"></i></div>
+              <p>Sanidad y Seguridad Social</p>
+            </div>
+            <div class="cat-card" onclick="showArticle('educacion')">
+              <div class="cat-icon"><i class="ti ti-school" aria-hidden="true"></i></div>
+              <p>Educación y becas</p>
+            </div>
+            <div class="cat-card" onclick="showArticle('trafico')">
+              <div class="cat-icon"><i class="ti ti-car" aria-hidden="true"></i></div>
+              <p>Tráfico y vehículos</p>
+            </div>
           </div>
-        </div>
-
-        <!-- MÁS BUSCADOS -->
-        <div class="section-label">Los más buscados esta semana</div>
-        <div class="art-list-item">
-          <div class="art-list-num">01</div>
-          <div class="art-list-text">
-            <h4>Cómo solicitar el empadronamiento por primera vez</h4>
-            <p>Documentación necesaria, plazo de resolución y qué pasa si no tienes contrato de alquiler.</p>
+ 
+          <!-- ARTÍCULOS DESTACADOS -->
+          <div class="section-label">Artículos destacados</div>
+          <div class="featured-grid">
+            <div class="art-main" onclick="showArticle('autonomos')">
+              <div class="art-img"><span class="art-img-tag">AUTÓNOMOS</span></div>
+              <div class="art-body">
+                <h2>Alta en autónomos en 2025: paso a paso sin errores</h2>
+                <p>Desde elegir la cuota hasta presentar el modelo 036. Todo lo que necesitas antes de empezar a facturar, con los cambios que entran en vigor este año.</p>
+                <div class="art-meta">12 min de lectura · Actualizado enero 2025</div>
+              </div>
+            </div>
+            <div class="art-side">
+              <div class="art-small" onclick="showArticle('dni')">
+                <div class="art-small-tag">DNI & PASAPORTE</div>
+                <h3>Cómo pedir cita previa para renovar el DNI (y no desesperarse)</h3>
+                <p>Los trucos que funcionan para conseguir cita en menos de una semana.</p>
+              </div>
+              <div class="art-small" onclick="showArticle('extranjeria')">
+                <div class="art-small-tag">EXTRANJERÍA</div>
+                <h3>TIE para ciudadanos de la UE: requisitos y documentación en 2025</h3>
+                <p>Qué necesitas, cuánto tarda y dónde pedirlo en tu provincia.</p>
+              </div>
+              <div class="art-small" onclick="showArticle('hacienda')">
+                <div class="art-small-tag">HACIENDA</div>
+                <h3>Declaración de la renta: deducciones que casi nadie aplica</h3>
+                <p>Gastos deducibles que la mayoría pasa por alto y que pueden ahorrarte dinero.</p>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="art-list-item">
-          <div class="art-list-num">02</div>
-          <div class="art-list-text">
-            <h4>Modelo 347: qué es, quién debe presentarlo y cuándo</h4>
-            <p>La declaración anual de operaciones con terceros explicada sin jerga fiscal.</p>
+ 
+          <!-- MÁS BUSCADOS -->
+          <div class="section-label">Los más buscados esta semana</div>
+          <div class="art-list-item" onclick="showArticle('sanidad')">
+            <div class="art-list-num">01</div>
+            <div class="art-list-text">
+              <h4>Cómo solicitar el empadronamiento por primera vez</h4>
+              <p>Documentación necesaria, plazo de resolución y qué pasa si no tienes contrato de alquiler.</p>
+            </div>
           </div>
-        </div>
-        <div class="art-list-item">
-          <div class="art-list-num">03</div>
-          <div class="art-list-text">
-            <h4>Baja voluntaria: derechos, plazos y cómo pedirla correctamente</h4>
-            <p>Todo sobre el preaviso, la liquidación y si tienes derecho al paro.</p>
+          <div class="art-list-item" onclick="showArticle('hacienda')">
+            <div class="art-list-num">02</div>
+            <div class="art-list-text">
+              <h4>Modelo 347: qué es, quién debe presentarlo y cuándo</h4>
+              <p>La declaración anual de operaciones con terceros explicada sin jerga fiscal.</p>
+            </div>
           </div>
-        </div>
-        <div class="art-list-item">
-          <div class="art-list-num">04</div>
-          <div class="art-list-text">
-            <h4>Certificado de nacimiento: cómo pedirlo online en 10 minutos</h4>
-            <p>Con o sin DNI electrónico, desde cualquier lugar del mundo.</p>
+          <div class="art-list-item" onclick="showArticle('autonomos')">
+            <div class="art-list-num">03</div>
+            <div class="art-list-text">
+              <h4>Baja voluntaria: derechos, plazos y cómo pedirla correctamente</h4>
+              <p>Todo sobre el preaviso, la liquidación y si tienes derecho al paro.</p>
+            </div>
           </div>
+          <div class="art-list-item" onclick="showArticle('dni')">
+            <div class="art-list-num">04</div>
+            <div class="art-list-text">
+              <h4>Certificado de nacimiento: cómo pedirlo online en 10 minutos</h4>
+              <p>Con o sin DNI electrónico, desde cualquier lugar del mundo.</p>
+            </div>
+          </div>
+ 
+        </main>
+ 
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+          <div class="ad-side">
+            <span>GOOGLE ADSENSE</span>
+            <small>300 × 250 px</small>
+          </div>
+          <div class="widget">
+            <h5>Trámites urgentes</h5>
+            <div class="widget-item" onclick="showArticle('dni')"><i class="ti ti-alert-circle"></i> Renovar DNI caducado <span class="badge-new">Guía</span></div>
+            <div class="widget-item" onclick="showArticle('sanidad')"><i class="ti ti-file-text"></i> Vida laboral online</div>
+            <div class="widget-item" onclick="showArticle('trafico')"><i class="ti ti-building-bank"></i> Recurrir una multa DGT</div>
+            <div class="widget-item" onclick="showArticle('sanidad')"><i class="ti ti-heart"></i> Solicitar tarjeta sanitaria</div>
+            <div class="widget-item" onclick="showArticle('vivienda')"><i class="ti ti-home"></i> Cambio de titular de luz</div>
+          </div>
+          <div class="newsletter">
+            <h5>Sin burocracia en tu correo</h5>
+            <p>Cada semana, los trámites más importantes explicados en 5 minutos.</p>
+            <input type="email" placeholder="tu@email.com" />
+            <button>Suscribirme gratis</button>
+          </div>
+          <div class="ad-side" style="height:130px; margin-top:18px;">
+            <span>GOOGLE ADSENSE</span>
+            <small>300 × 120 px</small>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div><!-- fin home-page -->
+ 
+ 
+  <!-- ==================== ARTÍCULOS ==================== -->
+ 
+  <!-- ARTÍCULO 1: DNI Y PASAPORTE -->
+  <div class="article-page" id="article-dni">
+    <div class="article-hero">
+      <div class="article-breadcrumb">
+        <span onclick="showHome()">Inicio</span> › <span>DNI y Pasaporte</span>
+      </div>
+      <div class="article-cat-tag">DNI Y PASAPORTE</div>
+      <h1>Cómo renovar el DNI en 2025: paso a paso sin complicaciones</h1>
+      <div class="article-hero-meta">
+        <span><i class="ti ti-clock"></i> 10 min de lectura</span>
+        <span><i class="ti ti-calendar"></i> Actualizado enero 2025</span>
+      </div>
+    </div>
+    <div class="article-wrapper">
+      <article class="article-content">
+        <button class="back-btn" onclick="showHome()"><i class="ti ti-arrow-left"></i> Volver al inicio</button>
+        <p class="lead">Renovar el DNI es uno de los trámites más comunes en España y, aunque parece sencillo, tiene sus trucos. En esta guía te explicamos todo lo que necesitas saber para hacerlo sin sorpresas en 2025.</p>
+ 
+        <h2>¿Cuándo hay que renovar el DNI?</h2>
+        <p>El DNI tiene una validez que varía según tu edad en el momento de obtenerlo:</p>
+        <ul>
+          <li>Menores de 5 años: válido 2 años</li>
+          <li>Entre 5 y 30 años: válido 5 años</li>
+          <li>Entre 30 y 70 años: válido 10 años</li>
+          <li>Mayores de 70 años: validez permanente</li>
+        </ul>
+        <p>También es obligatorio renovarlo si has cambiado de domicilio, te has casado o divorciado, o el documento está deteriorado o en mal estado.</p>
+ 
+        <div class="info-box">
+          <div class="info-box-title">💡 Importante</div>
+          <p>El DNI caducado no sirve para identificarte ante la Policía ni para viajar dentro de la UE. Renuévalo cuanto antes si está cerca de su fecha de vencimiento.</p>
         </div>
-
-      </main>
-
-      <!-- SIDEBAR -->
+ 
+        <h2>Documentación necesaria</h2>
+        <table class="doc-table">
+          <tr><th>Documento</th><th>Notas</th></tr>
+          <tr><td>DNI anterior (aunque esté caducado)</td><td>Original, no fotocopia</td></tr>
+          <tr><td>1 fotografía en color</td><td>Fondo blanco, 32x26 mm, reciente</td></tr>
+          <tr><td>Certificado de empadronamiento</td><td>Solo si has cambiado de domicilio</td></tr>
+          <tr><td>Pago de la tasa</td><td>12 euros (ordinario). Gratuito en ciertos casos</td></tr>
+        </table>
+ 
+        <h2>Paso a paso: cómo pedir cita previa</h2>
+        <ol class="steps-list">
+          <li>Entra en la web oficial: <strong>citapreviadnie.es</strong> o llama al 060</li>
+          <li>Selecciona tu provincia y la comisaría más cercana</li>
+          <li>Elige entre "Renovación de DNI" o "Renovación de DNI y Pasaporte" (si quieres renovar ambos a la vez)</li>
+          <li>Selecciona fecha y hora disponible</li>
+          <li>Guarda o imprime el justificante de cita</li>
+        </ol>
+ 
+        <div class="warning-box">
+          <div class="warning-box-title">⚠️ Truco para conseguir cita</div>
+          <p>Las citas se liberan continuamente. Si no encuentras hueco, entra a las 8:00 de la mañana o consulta en días festivos regionales cuando hay más plazas disponibles. También puedes intentarlo llamando directamente a tu comisaría local.</p>
+        </div>
+ 
+        <h2>El día de la cita: qué esperar</h2>
+        <p>El proceso en comisaría dura entre 10 y 20 minutos si llevas todo en orden. Te tomarán las huellas dactilares, una nueva fotografía y te pedirán que firmes digitalmente. En el momento te entregan el nuevo DNI.</p>
+        <p>Si también renuevas el pasaporte, el tiempo se alarga un poco más y el pasaporte no se entrega en el acto — tarda entre 24 horas y una semana según la comisaría.</p>
+ 
+        <h2>¿Puedo renovar el DNI sin cita previa?</h2>
+        <p>En general no, pero algunas comisarías pequeñas o en municipios rurales atienden sin cita. Llama antes para confirmar. En urgencias debidamente justificadas (viaje inminente, pérdida de documentación) algunas comisarías hacen excepciones.</p>
+ 
+        <h2>Precio y quién está exento de pagar</h2>
+        <p>La tasa ordinaria es de <strong>12 euros</strong>. Están exentos de pago las personas en situación de desempleo que no perciben prestación, las víctimas de violencia de género, y quienes renueven por robo o extravío con denuncia presentada.</p>
+ 
+        <h2>Renovar el DNI desde el extranjero</h2>
+        <p>Si resides en el extranjero, puedes renovarlo en el Consulado español de tu país de residencia. El proceso es similar pero los plazos suelen ser más largos. Consulta la web del Consulado correspondiente para ver sus requisitos específicos.</p>
+      </article>
       <aside class="sidebar">
-
-        <!-- ANUNCIO SIDEBAR 300x250 -->
-        <div class="ad-side">
-          <!-- SUSTITUYE ESTE DIV POR TU BLOQUE DE ADSENSE CUANDO LO TENGAS -->
-          <span>GOOGLE ADSENSE</span>
-          <small>300 × 250 px</small>
-        </div>
-
-        <!-- WIDGET TRÁMITES URGENTES -->
+        <div class="ad-side"><span>GOOGLE ADSENSE</span><small>300 × 250 px</small></div>
         <div class="widget">
-          <h5>Trámites urgentes</h5>
-          <a href="#" class="widget-item"><i class="ti ti-alert-circle" aria-hidden="true"></i> Renovar DNI caducado <span class="badge-new">Guía</span></a>
-          <a href="#" class="widget-item"><i class="ti ti-file-text" aria-hidden="true"></i> Vida laboral online</a>
-          <a href="#" class="widget-item"><i class="ti ti-building-bank" aria-hidden="true"></i> Recurrir una multa DGT</a>
-          <a href="#" class="widget-item"><i class="ti ti-heart" aria-hidden="true"></i> Solicitar tarjeta sanitaria</a>
-          <a href="#" class="widget-item"><i class="ti ti-home" aria-hidden="true"></i> Cambio de titular de luz</a>
+          <h5>También te puede interesar</h5>
+          <div class="widget-item" onclick="showArticle('extranjeria')"><i class="ti ti-plane"></i> Extranjería y visados</div>
+          <div class="widget-item" onclick="showArticle('autonomos')"><i class="ti ti-briefcase"></i> Alta en autónomos</div>
+          <div class="widget-item" onclick="showArticle('hacienda')"><i class="ti ti-coin"></i> Hacienda e impuestos</div>
         </div>
-
-        <!-- NEWSLETTER -->
         <div class="newsletter">
           <h5>Sin burocracia en tu correo</h5>
           <p>Cada semana, los trámites más importantes explicados en 5 minutos.</p>
           <input type="email" placeholder="tu@email.com" />
           <button>Suscribirme gratis</button>
         </div>
-
-        <!-- ANUNCIO SIDEBAR 300x120 -->
-        <div class="ad-side" style="height:130px; margin-top:18px;">
-          <!-- SUSTITUYE ESTE DIV POR TU BLOQUE DE ADSENSE CUANDO LO TENGAS -->
-          <span>GOOGLE ADSENSE</span>
-          <small>300 × 120 px</small>
-        </div>
-
       </aside>
     </div>
   </div>
-
+ 
+  <!-- ARTÍCULO 2: AUTÓNOMOS -->
+  <div class="article-page" id="article-autonomos">
+    <div class="article-hero">
+      <div class="article-breadcrumb">
+        <span onclick="showHome()">Inicio</span> › <span>Autónomos y empresa</span>
+      </div>
+      <div class="article-cat-tag">AUTÓNOMOS Y EMPRESA</div>
+      <h1>Alta en autónomos en 2025: todo lo que necesitas saber antes de empezar</h1>
+      <div class="article-hero-meta">
+        <span><i class="ti ti-clock"></i> 14 min de lectura</span>
+        <span><i class="ti ti-calendar"></i> Actualizado enero 2025</span>
+      </div>
+    </div>
+    <div class="article-wrapper">
+      <article class="article-content">
+        <button class="back-btn" onclick="showHome()"><i class="ti ti-arrow-left"></i> Volver al inicio</button>
+        <p class="lead">Darse de alta como autónomo en España implica dos trámites principales: registrarse en Hacienda (modelo 036 o 037) y darse de alta en la Seguridad Social (RETA). Te explicamos cómo hacerlo en 2025 con el nuevo sistema de cotización por ingresos reales.</p>
+ 
+        <h2>¿Cuándo estás obligado a darte de alta?</h2>
+        <p>La regla general es que debes darte de alta como autónomo cuando realizas una actividad económica de forma habitual, personal y directa. En la práctica, si facturas más del Salario Mínimo Interprofesional (SMI) al año de forma recurrente, Hacienda puede considerarte obligado a cotizar.</p>
+ 
+        <div class="info-box">
+          <div class="info-box-title">💡 Novedad 2025</div>
+          <p>Desde 2023 está vigente el nuevo sistema de cotización por ingresos reales. En 2025 la cuota mínima es de 200 euros al mes para rendimientos netos inferiores a 670 euros. Si ganas más, la cuota sube de forma progresiva hasta los 590 euros mensuales.</p>
+        </div>
+ 
+        <h2>Paso 1: Alta en Hacienda</h2>
+        <p>Antes de nada hay que comunicar a Hacienda que vas a realizar una actividad económica. Se hace con el <strong>modelo 036 o 037</strong> (el 037 es la versión simplificada para la mayoría de autónomos).</p>
+        <ol class="steps-list">
+          <li>Entra en la Sede Electrónica de la AEAT (agenciatributaria.gob.es)</li>
+          <li>Busca el modelo 037 y rellénalo online</li>
+          <li>En el apartado de actividad, elige el epígrafe del IAE que corresponde a tu trabajo</li>
+          <li>Indica la fecha de inicio de la actividad</li>
+          <li>Presenta el modelo con certificado digital, DNIe o Cl@ve PIN</li>
+        </ol>
+ 
+        <h2>Paso 2: Alta en la Seguridad Social (RETA)</h2>
+        <p>Tienes que darte de alta en el Régimen Especial de Trabajadores Autónomos dentro de los 60 días naturales anteriores al inicio de la actividad, o como máximo el mismo día.</p>
+        <ol class="steps-list">
+          <li>Entra en Import@ss (importass.seg-social.es)</li>
+          <li>Accede con certificado digital o Cl@ve</li>
+          <li>Selecciona "Alta en el RETA"</li>
+          <li>Elige tu base de cotización en función de tus ingresos previstos</li>
+          <li>Confirma tus datos bancarios para el cobro de la cuota mensual</li>
+        </ol>
+ 
+        <h2>La tarifa plana para nuevos autónomos</h2>
+        <p>Si es la primera vez que te das de alta (o han pasado más de 2 años desde tu última baja), tienes derecho a la <strong>tarifa plana de 80 euros al mes</strong> durante los primeros 12 meses, independientemente de tus ingresos. En algunas comunidades autónomas esta bonificación se amplía hasta los 24 meses.</p>
+ 
+        <div class="warning-box">
+          <div class="warning-box-title">⚠️ Atención</div>
+          <p>La tarifa plana se pierde si te das de baja antes de los 12 meses. Si crees que puedes necesitar darte de baja, valora bien el momento del alta para no perder la bonificación a mitad.</p>
+        </div>
+ 
+        <h2>Obligaciones fiscales del autónomo</h2>
+        <table class="doc-table">
+          <tr><th>Modelo</th><th>Qué es</th><th>Cuándo</th></tr>
+          <tr><td>Modelo 303</td><td>Declaración trimestral del IVA</td><td>Enero, abril, julio, octubre</td></tr>
+          <tr><td>Modelo 130</td><td>Pago fraccionado del IRPF</td><td>Mismo período que el 303</td></tr>
+          <tr><td>Modelo 100</td><td>Declaración anual de la renta</td><td>Abril-junio del año siguiente</td></tr>
+          <tr><td>Modelo 347</td><td>Operaciones con terceros +3.005€</td><td>Febrero del año siguiente</td></tr>
+        </table>
+ 
+        <h2>¿Necesito programa de facturación?</h2>
+        <p>No es obligatorio por ley, pero sí muy recomendable para llevar un control de tus facturas y calcular el IVA e IRPF correctamente. Programas como Quipu, Holded o Contasimple te automatizan los modelos trimestrales y cuestan entre 15 y 30 euros al mes.</p>
+      </article>
+      <aside class="sidebar">
+        <div class="ad-side"><span>GOOGLE ADSENSE</span><small>300 × 250 px</small></div>
+        <div class="widget">
+          <h5>También te puede interesar</h5>
+          <div class="widget-item" onclick="showArticle('hacienda')"><i class="ti ti-coin"></i> Hacienda e impuestos</div>
+          <div class="widget-item" onclick="showArticle('vivienda')"><i class="ti ti-home"></i> Vivienda e hipoteca</div>
+          <div class="widget-item" onclick="showArticle('sanidad')"><i class="ti ti-heart"></i> Seguridad Social</div>
+        </div>
+        <div class="newsletter">
+          <h5>Sin burocracia en tu correo</h5>
+          <p>Cada semana, los trámites más importantes explicados en 5 minutos.</p>
+          <input type="email" placeholder="tu@email.com" />
+          <button>Suscribirme gratis</button>
+        </div>
+      </aside>
+    </div>
+  </div>
+ 
+  <!-- ARTÍCULO 3: VIVIENDA -->
+  <div class="article-page" id="article-vivienda">
+    <div class="article-hero">
+      <div class="article-breadcrumb">
+        <span onclick="showHome()">Inicio</span> › <span>Vivienda e hipoteca</span>
+      </div>
+      <div class="article-cat-tag">VIVIENDA E HIPOTECA</div>
+      <h1>Comprar una vivienda en España: todos los trámites y gastos en 2025</h1>
+      <div class="article-hero-meta">
+        <span><i class="ti ti-clock"></i> 15 min de lectura</span>
+        <span><i class="ti ti-calendar"></i> Actualizado enero 2025</span>
+      </div>
+    </div>
+    <div class="article-wrapper">
+      <article class="article-content">
+        <button class="back-btn" onclick="showHome()"><i class="ti ti-arrow-left"></i> Volver al inicio</button>
+        <p class="lead">Comprar una vivienda es probablemente el trámite más importante (y caro) de tu vida. Más allá del precio del piso, hay impuestos, notaría, registro y gestoría que pueden suponer entre un 10% y un 15% adicional. Aquí te lo explicamos todo sin letra pequeña.</p>
+ 
+        <h2>Fases del proceso de compraventa</h2>
+        <ol class="steps-list">
+          <li><strong>Reserva:</strong> pagas entre 3.000 y 6.000 euros para "apartar" el piso mientras gestionas la hipoteca</li>
+          <li><strong>Contrato de arras:</strong> acuerdo privado donde se fija el precio y plazos. Sueles pagar el 10% del valor</li>
+          <li><strong>Firma de la hipoteca:</strong> el banco te da la oferta vinculante, tienes 10 días para aceptarla</li>
+          <li><strong>Firma ante notario:</strong> se firma la escritura de compraventa y la hipoteca simultáneamente</li>
+          <li><strong>Registro de la propiedad:</strong> la gestoría inscribe el inmueble a tu nombre</li>
+        </ol>
+ 
+        <h2>Gastos e impuestos al comprar</h2>
+        <table class="doc-table">
+          <tr><th>Concepto</th><th>Importe aproximado</th></tr>
+          <tr><td>ITP (vivienda de segunda mano)</td><td>6%-10% del precio según comunidad autónoma</td></tr>
+          <tr><td>IVA (vivienda nueva)</td><td>10% del precio (4% VPO)</td></tr>
+          <tr><td>Notaría</td><td>600 - 1.200 euros</td></tr>
+          <tr><td>Registro de la Propiedad</td><td>400 - 700 euros</td></tr>
+          <tr><td>Gestoría</td><td>300 - 600 euros</td></tr>
+          <tr><td>Tasación (para la hipoteca)</td><td>300 - 500 euros</td></tr>
+        </table>
+ 
+        <div class="warning-box">
+          <div class="warning-box-title">⚠️ Calcula bien antes de comprar</div>
+          <p>Si el piso cuesta 200.000 euros, calcula entre 20.000 y 30.000 euros adicionales solo en impuestos y gastos. El banco suele financiar hasta el 80% del valor de tasación, así que necesitas tener ahorrado al menos ese 20% más los gastos.</p>
+        </div>
+ 
+        <h2>El contrato de arras: qué pasa si te echas atrás</h2>
+        <p>El contrato de arras penitenciales (el más habitual) funciona así: si tú te echas atrás, pierdes las arras entregadas. Si se echa atrás el vendedor, debe devolverte el doble de lo que pagaste. Es un contrato muy importante — léelo bien antes de firmarlo.</p>
+ 
+        <h2>Documentación que necesitas para pedir la hipoteca</h2>
+        <ul>
+          <li>DNI en vigor</li>
+          <li>Últimas 3 nóminas o declaración de la renta si eres autónomo</li>
+          <li>Contrato de trabajo</li>
+          <li>Vida laboral actualizada</li>
+          <li>Extractos bancarios de los últimos 3-6 meses</li>
+          <li>Nota simple del inmueble (del Registro de la Propiedad)</li>
+        </ul>
+ 
+        <h2>Empadronamiento en la nueva vivienda</h2>
+        <p>Una vez que te hayas mudado, tienes que empadronarte en el nuevo domicilio. Es un trámite que se hace en el Ayuntamiento, necesitas el contrato de compraventa o escritura y el DNI. El empadronamiento es imprescindible para acceder a servicios públicos como el médico de cabecera.</p>
+      </article>
+      <aside class="sidebar">
+        <div class="ad-side"><span>GOOGLE ADSENSE</span><small>300 × 250 px</small></div>
+        <div class="widget">
+          <h5>También te puede interesar</h5>
+          <div class="widget-item" onclick="showArticle('hacienda')"><i class="ti ti-coin"></i> Hacienda e impuestos</div>
+          <div class="widget-item" onclick="showArticle('sanidad')"><i class="ti ti-heart"></i> Empadronamiento</div>
+          <div class="widget-item" onclick="showArticle('autonomos')"><i class="ti ti-briefcase"></i> Autónomos</div>
+        </div>
+        <div class="newsletter">
+          <h5>Sin burocracia en tu correo</h5>
+          <p>Cada semana, los trámites más importantes explicados en 5 minutos.</p>
+          <input type="email" placeholder="tu@email.com" />
+          <button>Suscribirme gratis</button>
+        </div>
+      </aside>
+    </div>
+  </div>
+ 
+  <!-- ARTÍCULO 4: EXTRANJERÍA -->
+  <div class="article-page" id="article-extranjeria">
+    <div class="article-hero">
+      <div class="article-breadcrumb">
+        <span onclick="showHome()">Inicio</span> › <span>Extranjería y visados</span>
+      </div>
+      <div class="article-cat-tag">EXTRANJERÍA Y VISADOS</div>
+      <h1>NIE, TIE y residencia en España: guía completa para extranjeros en 2025</h1>
+      <div class="article-hero-meta">
+        <span><i class="ti ti-clock"></i> 13 min de lectura</span>
+        <span><i class="ti ti-calendar"></i> Actualizado enero 2025</span>
+      </div>
+    </div>
+    <div class="article-wrapper">
+      <article class="article-content">
+        <button class="back-btn" onclick="showHome()"><i class="ti ti-arrow-left"></i> Volver al inicio</button>
+        <p class="lead">Si eres extranjero y quieres vivir, trabajar o simplemente comprar algo en España, necesitarás el NIE. Si eres ciudadano de la UE, también te conviene el TIE. Te explicamos qué es cada cosa, cuándo necesitas cada documento y cómo obtenerlos.</p>
+ 
+        <h2>¿Qué es el NIE?</h2>
+        <p>El NIE (Número de Identificación de Extranjero) es un número único que identifica a cualquier ciudadano extranjero en España. Lo necesitas para casi cualquier gestión: abrir una cuenta bancaria, comprar un piso, trabajar, pagar impuestos o matricularte en la universidad.</p>
+        <p>El NIE en sí es solo un número — no es un documento de residencia. Para residir legalmente necesitas además la tarjeta TIE o el certificado de registro si eres ciudadano de la UE.</p>
+ 
+        <h2>NIE para ciudadanos de la UE</h2>
+        <ol class="steps-list">
+          <li>Pide cita en la Oficina de Extranjería o en la Comisaría de Policía de tu provincia</li>
+          <li>Rellena el formulario EX-18 (disponible en la web del Ministerio del Interior)</li>
+          <li>Paga la tasa 012 (actualmente 10,50 euros) en cualquier banco</li>
+          <li>Presenta en la cita: pasaporte o DNI, formulario EX-18, justificante del pago y motivo de la solicitud</li>
+          <li>Recibes el NIE en el acto o en pocos días</li>
+        </ol>
+ 
+        <h2>TIE: Tarjeta de Identidad de Extranjero (ciudadanos UE)</h2>
+        <p>Si eres ciudadano de la UE y llevas más de 3 meses residiendo en España, debes solicitar el <strong>Certificado de Registro de Ciudadano de la Unión</strong> (la conocida "tarjeta verde" o TIE). Es obligatorio si resides de forma permanente.</p>
+ 
+        <table class="doc-table">
+          <tr><th>Documento</th><th>Para quién</th></tr>
+          <tr><td>Certificado de Registro UE (tarjeta verde)</td><td>Ciudadanos de la UE que residen más de 3 meses</td></tr>
+          <tr><td>TIE con autorización de residencia</td><td>Ciudadanos de fuera de la UE</td></tr>
+          <tr><td>TIE con autorización de residencia y trabajo</td><td>Ciudadanos de fuera de la UE que trabajan</td></tr>
+        </table>
+ 
+        <h2>Residencia para ciudadanos de fuera de la UE</h2>
+        <p>El proceso es más complejo e implica obtener primero un visado de larga duración en el consulado español de tu país, y después tramitar la autorización de residencia una vez en España. Los tipos más habituales son:</p>
+        <ul>
+          <li><strong>Visado por reagrupación familiar</strong> si tienes un familiar con residencia en España</li>
+          <li><strong>Visado de trabajo</strong> con una oferta de empleo de una empresa española</li>
+          <li><strong>Visado de nómada digital</strong> para trabajadores remotos con ingresos de fuera de España</li>
+          <li><strong>Visado no lucrativo</strong> si tienes ingresos propios suficientes sin necesidad de trabajar en España</li>
+        </ul>
+ 
+        <div class="info-box">
+          <div class="info-box-title">💡 Nómada digital en 2025</div>
+          <p>España tiene desde 2023 una visa específica para nómadas digitales que trabajan para empresas extranjeras. Requiere demostrar ingresos de al menos el 200% del SMI español y permite residir en España hasta 5 años.</p>
+        </div>
+      </article>
+      <aside class="sidebar">
+        <div class="ad-side"><span>GOOGLE ADSENSE</span><small>300 × 250 px</small></div>
+        <div class="widget">
+          <h5>También te puede interesar</h5>
+          <div class="widget-item" onclick="showArticle('dni')"><i class="ti ti-id-badge"></i> DNI y pasaporte</div>
+          <div class="widget-item" onclick="showArticle('sanidad')"><i class="ti ti-heart"></i> Sanidad y SS</div>
+          <div class="widget-item" onclick="showArticle('autonomos')"><i class="ti ti-briefcase"></i> Alta en autónomos</div>
+        </div>
+        <div class="newsletter">
+          <h5>Sin burocracia en tu correo</h5>
+          <p>Cada semana, los trámites más importantes explicados en 5 minutos.</p>
+          <input type="email" placeholder="tu@email.com" />
+          <button>Suscribirme gratis</button>
+        </div>
+      </aside>
+    </div>
+  </div>
+ 
+  <!-- ARTÍCULO 5: HACIENDA -->
+  <div class="article-page" id="article-hacienda">
+    <div class="article-hero">
+      <div class="article-breadcrumb">
+        <span onclick="showHome()">Inicio</span> › <span>Hacienda e impuestos</span>
+      </div>
+      <div class="article-cat-tag">HACIENDA E IMPUESTOS</div>
+      <h1>La declaración de la renta en 2025: deducciones que casi nadie aplica</h1>
+      <div class="article-hero-meta">
+        <span><i class="ti ti-clock"></i> 12 min de lectura</span>
+        <span><i class="ti ti-calendar"></i> Actualizado enero 2025</span>
+      </div>
+    </div>
+    <div class="article-wrapper">
+      <article class="article-content">
+        <button class="back-btn" onclick="showHome()"><i class="ti ti-arrow-left"></i> Volver al inicio</button>
+        <p class="lead">Hacer la renta no es solo rellenar el borrador que te manda Hacienda y aceptarlo. Hay decenas de deducciones que puedes aplicar y que la mayoría de contribuyentes no conoce. En esta guía te las explicamos todas para que no pagues más de lo que debes.</p>
+ 
+        <h2>¿Quién está obligado a declarar en 2025?</h2>
+        <p>Estás obligado a hacer la declaración de la renta si:</p>
+        <ul>
+          <li>Tus ingresos del trabajo superan los 22.000 euros anuales (de un solo pagador)</li>
+          <li>Tus ingresos del trabajo superan los 15.000 euros con más de un pagador</li>
+          <li>Tienes rendimientos del capital mobiliario o ganancias patrimoniales superiores a 1.600 euros</li>
+          <li>Eres autónomo, independientemente de tus ingresos</li>
+        </ul>
+ 
+        <div class="info-box">
+          <div class="info-box-title">💡 Aunque no estés obligado, puede interesarte</div>
+          <p>Si te han retenido demasiado IRPF durante el año, Hacienda te debe devolver dinero. No declarar significa regalarle ese dinero. Comprueba siempre tu borrador.</p>
+        </div>
+ 
+        <h2>Deducciones que mucha gente se olvida</h2>
+        <h3>1. Deducción por alquiler de vivienda habitual</h3>
+        <p>Si empezaste a alquilar tu vivienda habitual antes del 1 de enero de 2015, puedes deducirte hasta el 10,05% de las cantidades pagadas, con un límite de base de 9.040 euros. Si tu contrato es posterior a 2015, la deducción estatal desapareció, pero muchas comunidades autónomas tienen su propia deducción por alquiler.</p>
+ 
+        <h3>2. Deducción por donativos</h3>
+        <p>Los primeros 150 euros donados a ONGs o partidos políticos tienen una deducción del 80%. El resto, hasta ciertos límites, deduce un 35% (o 40% si llevas más de 3 años donando a la misma entidad).</p>
+ 
+        <h3>3. Gastos deducibles de los trabajadores</h3>
+        <p>Puedes deducirte las cuotas sindicales, las cuotas de colegios profesionales obligatorios (hasta 500 euros), y los gastos de defensa jurídica en litigios laborales hasta 300 euros.</p>
+ 
+        <h3>4. Maternidad y familia numerosa</h3>
+        <p>Las madres trabajadoras pueden deducirse hasta 1.200 euros anuales por cada hijo menor de 3 años. Las familias numerosas tienen una deducción de 1.200 euros anuales (2.400 para familia numerosa especial).</p>
+ 
+        <h3>5. Planes de pensiones</h3>
+        <p>Las aportaciones a planes de pensiones reducen directamente tu base imponible. En 2025 el límite es de 1.500 euros anuales para planes individuales.</p>
+ 
+        <h2>Plazos de la campaña de la renta 2025</h2>
+        <table class="doc-table">
+          <tr><th>Fecha</th><th>Hito</th></tr>
+          <tr><td>2 de abril de 2025</td><td>Inicio de la campaña. Puedes presentar el borrador por internet</td></tr>
+          <tr><td>6 de mayo de 2025</td><td>Inicio de la atención telefónica de Hacienda (cita previa)</td></tr>
+          <tr><td>2 de junio de 2025</td><td>Inicio de la atención presencial en oficinas</td></tr>
+          <tr><td>25 de junio de 2025</td><td>Último día si el resultado es a ingresar con domiciliación bancaria</td></tr>
+          <tr><td>30 de junio de 2025</td><td>Último día de la campaña</td></tr>
+        </table>
+ 
+        <div class="warning-box">
+          <div class="warning-box-title">⚠️ No aceptes el borrador a ciegas</div>
+          <p>El borrador de Hacienda solo incluye los datos que le han comunicado las empresas y entidades financieras. No incluye tus donaciones, las cuotas del colegio profesional ni muchas otras deducciones. Revísalo siempre antes de confirmarlo.</p>
+        </div>
+      </article>
+      <aside class="sidebar">
+        <div class="ad-side"><span>GOOGLE ADSENSE</span><small>300 × 250 px</small></div>
+        <div class="widget">
+          <h5>También te puede interesar</h5>
+          <div class="widget-item" onclick="showArticle('autonomos')"><i class="ti ti-briefcase"></i> Alta en autónomos</div>
+          <div class="widget-item" onclick="showArticle('vivienda')"><i class="ti ti-home"></i> Comprar vivienda</div>
+          <div class="widget-item" onclick="showArticle('sanidad')"><i class="ti ti-heart"></i> Seguridad Social</div>
+        </div>
+        <div class="newsletter">
+          <h5>Sin burocracia en tu correo</h5>
+          <p>Cada semana, los trámites más importantes explicados en 5 minutos.</p>
+          <input type="email" placeholder="tu@email.com" />
+          <button>Suscribirme gratis</button>
+        </div>
+      </aside>
+    </div>
+  </div>
+ 
+  <!-- ARTÍCULO 6: SANIDAD -->
+  <div class="article-page" id="article-sanidad">
+    <div class="article-hero">
+      <div class="article-breadcrumb">
+        <span onclick="showHome()">Inicio</span> › <span>Sanidad y Seguridad Social</span>
+      </div>
+      <div class="article-cat-tag">SANIDAD Y SEGURIDAD SOCIAL</div>
+      <h1>Tarjeta sanitaria, empadronamiento y Seguridad Social: cómo acceder al sistema en 2025</h1>
+      <div class="article-hero-meta">
+        <span><i class="ti ti-clock"></i> 11 min de lectura</span>
+        <span><i class="ti ti-calendar"></i> Actualizado enero 2025</span>
+      </div>
+    </div>
+    <div class="article-wrapper">
+      <article class="article-content">
+        <button class="back-btn" onclick="showHome()"><i class="ti ti-arrow-left"></i> Volver al inicio</button>
+        <p class="lead">La sanidad pública en España es gratuita pero no automática: hay que tramitar la tarjeta sanitaria, estar empadronado y en muchos casos cotizar a la Seguridad Social. Te explicamos cómo acceder al sistema desde cero.</p>
+ 
+        <h2>El empadronamiento: el primer paso</h2>
+        <p>Para acceder a la sanidad pública en España necesitas estar empadronado en el municipio donde vives. El empadronamiento es el registro oficial de tu domicilio habitual y es completamente gratuito.</p>
+        <ol class="steps-list">
+          <li>Ve al Ayuntamiento de tu municipio (muchos permiten hacerlo online)</li>
+          <li>Lleva tu DNI o NIE y un documento que acredite tu domicilio (contrato de alquiler, escritura de propiedad, o autorización del propietario)</li>
+          <li>Rellena el formulario de alta en el padrón municipal</li>
+          <li>Recibes el certificado de empadronamiento en el acto o en pocos días</li>
+        </ol>
+ 
+        <div class="info-box">
+          <div class="info-box-title">💡 Sin contrato de alquiler</div>
+          <p>Si vives en casa de un familiar o amigo sin contrato, el propietario puede firmar una autorización para que te empadrones en su domicilio. No es necesario tener contrato de alquiler.</p>
+        </div>
+ 
+        <h2>Cómo solicitar la tarjeta sanitaria</h2>
+        <p>Con el empadronamiento en mano, puedes solicitar la tarjeta sanitaria en el Centro de Atención Primaria (CAP) más cercano a tu domicilio. En función de tu situación:</p>
+        <ul>
+          <li><strong>Trabajadores por cuenta ajena:</strong> el empresario te da de alta en la SS y automáticamente tienes derecho a la sanidad</li>
+          <li><strong>Autónomos:</strong> al darte de alta en el RETA ya tienes derecho a la tarjeta</li>
+          <li><strong>Desempleados:</strong> si cobras prestación por desempleo tienes acceso. Si no cobras, puedes solicitar el convenio especial</li>
+          <li><strong>Sin trabajo ni prestación:</strong> puedes acceder igualmente si estás empadronado más de un año en España</li>
+        </ul>
+ 
+        <h2>La vida laboral: cómo pedirla online</h2>
+        <p>El informe de vida laboral es un documento oficial de la Seguridad Social que recoge todos los períodos cotizados a lo largo de tu carrera. Es necesario para pedir la jubilación, una hipoteca, una ayuda o simplemente saber cuánto has cotizado.</p>
+        <ol class="steps-list">
+          <li>Entra en Import@ss (importass.seg-social.es)</li>
+          <li>Identifícate con Cl@ve, certificado digital o SMS</li>
+          <li>Busca "Informe de vida laboral"</li>
+          <li>Descárgalo en PDF al instante, completamente gratis</li>
+        </ol>
+ 
+        <h2>Prestación por desempleo: quién tiene derecho</h2>
+        <p>Tienes derecho al paro si has cotizado al menos 360 días en los últimos 6 años y has perdido el trabajo de forma involuntaria (despido) o por ERE. La duración de la prestación depende del tiempo cotizado: desde 4 meses con 360 días cotizados hasta 2 años con más de 2.160 días.</p>
+ 
+        <div class="warning-box">
+          <div class="warning-box-title">⚠️ Plazo para pedir el paro</div>
+          <p>Tienes 15 días hábiles desde la fecha del despido para solicitar la prestación. Si te pasas de ese plazo, Hacienda descuenta los días de retraso del total de la prestación. Pídelo cuanto antes.</p>
+        </div>
+      </article>
+      <aside class="sidebar">
+        <div class="ad-side"><span>GOOGLE ADSENSE</span><small>300 × 250 px</small></div>
+        <div class="widget">
+          <h5>También te puede interesar</h5>
+          <div class="widget-item" onclick="showArticle('autonomos')"><i class="ti ti-briefcase"></i> Alta en autónomos</div>
+          <div class="widget-item" onclick="showArticle('extranjeria')"><i class="ti ti-plane"></i> Extranjería</div>
+          <div class="widget-item" onclick="showArticle('hacienda')"><i class="ti ti-coin"></i> Hacienda</div>
+        </div>
+        <div class="newsletter">
+          <h5>Sin burocracia en tu correo</h5>
+          <p>Cada semana, los trámites más importantes explicados en 5 minutos.</p>
+          <input type="email" placeholder="tu@email.com" />
+          <button>Suscribirme gratis</button>
+        </div>
+      </aside>
+    </div>
+  </div>
+ 
+  <!-- ARTÍCULO 7: EDUCACIÓN -->
+  <div class="article-page" id="article-educacion">
+    <div class="article-hero">
+      <div class="article-breadcrumb">
+        <span onclick="showHome()">Inicio</span> › <span>Educación y becas</span>
+      </div>
+      <div class="article-cat-tag">EDUCACIÓN Y BECAS</div>
+      <h1>Becas del Ministerio de Educación en 2025: cómo solicitarlas y no quedarte sin ellas</h1>
+      <div class="article-hero-meta">
+        <span><i class="ti ti-clock"></i> 11 min de lectura</span>
+        <span><i class="ti ti-calendar"></i> Actualizado enero 2025</span>
+      </div>
+    </div>
+    <div class="article-wrapper">
+      <article class="article-content">
+        <button class="back-btn" onclick="showHome()"><i class="ti ti-arrow-left"></i> Volver al inicio</button>
+        <p class="lead">Cada año miles de estudiantes dejan de cobrar la beca del Ministerio por no pedirla a tiempo, por no reunir la documentación o por desconocer los requisitos. Esta guía te explica cómo no cometer esos errores.</p>
+ 
+        <h2>Tipos de becas del Ministerio</h2>
+        <ul>
+          <li><strong>Beca general universitaria:</strong> para estudiantes de grado, máster habilitante y doctorado</li>
+          <li><strong>Beca para ciclos formativos:</strong> para estudiantes de FP de grado medio y superior</li>
+          <li><strong>Beca de educación especial:</strong> para personas con discapacidad</li>
+          <li><strong>Beca de movilidad:</strong> para estudiar en otra comunidad autónoma</li>
+          <li><strong>Beca Erasmus+:</strong> para estudiar en otro país de la UE</li>
+        </ul>
+ 
+        <h2>Requisitos económicos generales</h2>
+        <p>El umbral económico depende del número de miembros de la unidad familiar. A modo orientativo, para una familia de 4 miembros el umbral es de aproximadamente 47.000 euros de renta anual. Por encima de ese umbral no tienes derecho a la beca de matrícula ni a la cuantía fija, pero sí a la beca de movilidad si cambias de comunidad.</p>
+ 
+        <div class="info-box">
+          <div class="info-box-title">💡 Requisito académico</div>
+          <p>Para renovar la beca en cursos sucesivos necesitas haber aprobado un porcentaje de los créditos matriculados el año anterior. Para estudiantes de grado en ciencias técnicas el mínimo suele ser el 65% de los créditos; en el resto de ramas, el 90%.</p>
+        </div>
+ 
+        <h2>Cómo solicitar la beca paso a paso</h2>
+        <ol class="steps-list">
+          <li>Entra en la sede electrónica del Ministerio de Educación (sede.educacion.gob.es) cuando abra la convocatoria (normalmente en agosto)</li>
+          <li>Identifícate con DNI electrónico, certificado digital o Cl@ve</li>
+          <li>Rellena el formulario con tus datos académicos y los de tu unidad familiar</li>
+          <li>Adjunta la documentación requerida (ver tabla abajo)</li>
+          <li>Presenta la solicitud antes del plazo de cierre (normalmente octubre)</li>
+        </ol>
+ 
+        <h2>Documentación necesaria</h2>
+        <table class="doc-table">
+          <tr><th>Documento</th><th>Quién lo necesita</th></tr>
+          <tr><td>DNI o NIE del solicitante y sus familiares</td><td>Todos</td></tr>
+          <tr><td>Declaración de la renta del año anterior</td><td>Todos los miembros de la unidad familiar</td></tr>
+          <tr><td>Certificado de matrícula</td><td>Todos</td></tr>
+          <tr><td>Certificado de discapacidad</td><td>Solo si aplica</td></tr>
+          <tr><td>Resolución de divorcio o separación</td><td>Solo si aplica</td></tr>
+        </table>
+ 
+        <h2>Cuándo se cobra y cuánto</h2>
+        <p>La beca se paga normalmente entre enero y marzo del curso académico correspondiente. La cuantía depende de varios factores: renta familiar, nota media, si cambias de domicilio para estudiar, etc. El importe puede oscilar entre los 300 euros (solo matrícula) hasta más de 5.000 euros si hay varios componentes (fija, variable, residencia, desplazamiento).</p>
+ 
+        <div class="warning-box">
+          <div class="warning-box-title">⚠️ Si el Ministerio te la deniega</div>
+          <p>Tienes derecho a presentar un recurso de alzada en el plazo de un mes desde la notificación de la resolución denegatoria. Muchas denegaciones se revierten en el recurso, especialmente las relacionadas con errores en los datos de renta.</p>
+        </div>
+      </article>
+      <aside class="sidebar">
+        <div class="ad-side"><span>GOOGLE ADSENSE</span><small>300 × 250 px</small></div>
+        <div class="widget">
+          <h5>También te puede interesar</h5>
+          <div class="widget-item" onclick="showArticle('sanidad')"><i class="ti ti-heart"></i> Sanidad y SS</div>
+          <div class="widget-item" onclick="showArticle('hacienda')"><i class="ti ti-coin"></i> Hacienda</div>
+          <div class="widget-item" onclick="showArticle('extranjeria')"><i class="ti ti-plane"></i> Extranjería</div>
+        </div>
+        <div class="newsletter">
+          <h5>Sin burocracia en tu correo</h5>
+          <p>Cada semana, los trámites más importantes explicados en 5 minutos.</p>
+          <input type="email" placeholder="tu@email.com" />
+          <button>Suscribirme gratis</button>
+        </div>
+      </aside>
+    </div>
+  </div>
+ 
+  <!-- ARTÍCULO 8: TRÁFICO -->
+  <div class="article-page" id="article-trafico">
+    <div class="article-hero">
+      <div class="article-breadcrumb">
+        <span onclick="showHome()">Inicio</span> › <span>Tráfico y vehículos</span>
+      </div>
+      <div class="article-cat-tag">TRÁFICO Y VEHÍCULOS</div>
+      <h1>Multas de tráfico en 2025: cómo recurrirlas y cuándo te conviene hacerlo</h1>
+      <div class="article-hero-meta">
+        <span><i class="ti ti-clock"></i> 12 min de lectura</span>
+        <span><i class="ti ti-calendar"></i> Actualizado enero 2025</span>
+      </div>
+    </div>
+    <div class="article-wrapper">
+      <article class="article-content">
+        <button class="back-btn" onclick="showHome()"><i class="ti ti-arrow-left"></i> Volver al inicio</button>
+        <p class="lead">Recibir una multa de tráfico no significa que tengas que pagarla sin más. Hay casos en los que el recurso tiene muchas probabilidades de éxito, y otros en los que conviene pagar con el descuento del 50% cuanto antes. Te explicamos cómo decidir y cómo actuar.</p>
+ 
+        <h2>Plazos clave al recibir una multa</h2>
+        <table class="doc-table">
+          <tr><th>Acción</th><th>Plazo</th></tr>
+          <tr><td>Pago con descuento del 50%</td><td>20 días naturales desde la notificación</td></tr>
+          <tr><td>Recurso de reposición (multas leves y graves)</td><td>20 días hábiles desde la notificación</td></tr>
+          <tr><td>Alegaciones antes de la resolución</td><td>20 días hábiles desde la notificación del inicio</td></tr>
+          <tr><td>Recurso contencioso-administrativo</td><td>2 meses desde la resolución denegatoria</td></tr>
+        </table>
+ 
+        <div class="warning-box">
+          <div class="warning-box-title">⚠️ Importante sobre el descuento</div>
+          <p>Si pagas con el descuento del 50%, renuncias automáticamente a recurrir la multa. Evalúa antes si merece la pena recurrir o pagar.</p>
+        </div>
+ 
+        <h2>Cuándo merece la pena recurrir</h2>
+        <p>Recurrir tiene sentido cuando existe alguno de estos motivos:</p>
+        <ul>
+          <li>La notificación no se realizó correctamente (dirección errónea, no se intentó dos veces...)</li>
+          <li>La señal o el radar no estaban debidamente homologados o señalizados</li>
+          <li>No eras el conductor del vehículo en el momento de la infracción</li>
+          <li>Han prescrito los plazos para sancionar (1 año para infracciones graves, 2 años para muy graves)</li>
+          <li>Hay un error en los datos del expediente (matrícula, fecha, lugar)</li>
+        </ul>
+ 
+        <h2>Cómo presentar el recurso de reposición</h2>
+        <ol class="steps-list">
+          <li>Entra en la Sede Electrónica de la DGT (sede.dgt.gob.es)</li>
+          <li>Busca "Recursos y alegaciones"</li>
+          <li>Identifícate con Cl@ve, certificado digital o DNI electrónico</li>
+          <li>Introduce el número de expediente de la multa</li>
+          <li>Redacta tu recurso indicando los motivos de impugnación</li>
+          <li>Adjunta las pruebas que tengas (fotos, testigos, documentación del vehículo...)</li>
+          <li>Presenta y guarda el justificante de presentación</li>
+        </ol>
+ 
+        <h2>Pérdida de puntos: cómo saber cuántos te quedan</h2>
+        <p>Para consultar tu saldo de puntos del carné de conducir:</p>
+        <ol class="steps-list">
+          <li>Entra en sede.dgt.gob.es</li>
+          <li>Accede con Cl@ve o certificado digital</li>
+          <li>Selecciona "Consulta de puntos del permiso de conducir"</li>
+          <li>Verás el saldo actual y las sanciones que han descontado puntos</li>
+        </ol>
+ 
+        <div class="info-box">
+          <div class="info-box-title">💡 Recuperar puntos</div>
+          <p>Si tienes menos de 15 puntos puedes recuperarlos haciendo un curso de sensibilización y reeducación vial. Cada curso te da hasta 6 puntos de vuelta, con un máximo de 15 puntos en total. Solo puedes hacer un curso cada 2 años.</p>
+        </div>
+ 
+        <h2>Transferencia de vehículo: pasos y tasas</h2>
+        <p>Si compras o vendes un coche de segunda mano, hay que hacer la transferencia de titularidad ante la DGT. El comprador tiene 30 días para hacerla desde la firma del contrato de compraventa. El coste es de 55,70 euros en tasas, más el Impuesto de Transmisiones Patrimoniales que varía por comunidad autónoma.</p>
+      </article>
+      <aside class="sidebar">
+        <div class="ad-side"><span>GOOGLE ADSENSE</span><small>300 × 250 px</small></div>
+        <div class="widget">
+          <h5>También te puede interesar</h5>
+          <div class="widget-item" onclick="showArticle('hacienda')"><i class="ti ti-coin"></i> Hacienda</div>
+          <div class="widget-item" onclick="showArticle('vivienda')"><i class="ti ti-home"></i> Vivienda</div>
+          <div class="widget-item" onclick="showArticle('dni')"><i class="ti ti-id-badge"></i> DNI y pasaporte</div>
+        </div>
+        <div class="newsletter">
+          <h5>Sin burocracia en tu correo</h5>
+          <p>Cada semana, los trámites más importantes explicados en 5 minutos.</p>
+          <input type="email" placeholder="tu@email.com" />
+          <button>Suscribirme gratis</button>
+        </div>
+      </aside>
+    </div>
+  </div>
+ 
   <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-name">TrámitesYa.es — Información práctica, no asesoría legal</div>
@@ -613,6 +1472,23 @@
     <a href="#">Cookies</a>
     <a href="#">Contacto</a>
   </footer>
-
+ 
+  <script>
+    function showHome() {
+      document.getElementById('home-page').classList.remove('hidden');
+      document.querySelectorAll('.article-page').forEach(p => p.classList.remove('active'));
+      window.scrollTo(0, 0);
+    }
+ 
+    function showArticle(id) {
+      document.getElementById('home-page').classList.add('hidden');
+      document.querySelectorAll('.article-page').forEach(p => p.classList.remove('active'));
+      const art = document.getElementById('article-' + id);
+      if (art) art.classList.add('active');
+      window.scrollTo(0, 0);
+    }
+  </script>
+ 
 </body>
 </html>
+ 
